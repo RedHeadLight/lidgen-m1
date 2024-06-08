@@ -1,0 +1,118 @@
+.steps {
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    @include desktop(){
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+}
+
+.steps__container {
+    @include desktop(){
+        display: grid;
+        grid-template-columns: 584px 1fr;
+        gap: 16px;
+        align-items: flex-start;
+    }
+}
+
+.steps__title {
+    @include desktop(){
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+}
+
+.steps__list {
+    counter-reset: steps;
+
+    @include desktop(){
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+}
+
+.steps__item {
+    padding: 16px;
+    border: 2px solid $blue;
+    border-radius: 8px;
+    counter-increment: steps;
+
+    & + & {
+        margin-top: 16px;
+    }
+
+    &::before {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1;
+        color: #d9dae3;
+        content: counter(steps, decimal-leading-zero);
+        display: block;
+        margin-bottom: 16px;
+
+        @include desktop(){
+            font-size: 36px;
+        }
+    }
+}
+
+.steps__item-title {
+    @include mobile-h3;
+    color: $text-dark;
+
+    @include desktop(){
+        @include desktop-h3;
+    }
+}
+
+.steps__item-text {
+    @include mobile-text;
+    color: $text-light;
+
+    @include desktop(){
+        @include desktop-text;
+    }
+}
+
+.steps__wrapper {
+    @include desktop(){
+        grid-column: 1/2;
+        grid-row: 2/3;
+        position: sticky;
+        top: 10px;
+    }
+}
+
+.steps__img-wrapper {
+    margin-top: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 343/200;
+
+    @include desktop(){
+        margin-top: 0;
+        aspect-ratio: 584/407;
+    }
+}
+
+.steps__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $white;
+    border-radius: 8px;
+    background-color: $brand-button;
+    border: none;
+    padding: 16px;
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    text-align: center;
+
+    @include desktop(){
+        width: 317px;
+    }
+}

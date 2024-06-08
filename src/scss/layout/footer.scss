@@ -1,0 +1,112 @@
+.footer {
+    background-color: $brand-bg;
+    padding: 9px 0 16px;
+    color: $white;
+    text-align: left;
+
+    @include desktop() {
+        padding: 26px 0 112px;
+    }
+}
+
+.footer__container {
+    @include desktop() {
+        display: grid;
+        grid-template-columns: 284px 1fr 294px; 
+    }
+}
+.footer__logo {
+    margin-bottom: 18px;
+
+    @include desktop() {
+        width: 284px;
+        height: 80px;
+        margin-bottom: 0;
+        grid-column: 1/2;
+    }
+}
+
+.footer__wrapper {
+    @include desktop() {
+        grid-column: 3/4;
+        grid-row: 1/4;
+        text-align: right;
+    }
+}
+
+.footer__heading {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    margin-bottom: 4px;
+
+    @include desktop() {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 16px;
+    }
+}
+
+.footer__tel {
+    font-weight: 700;
+    font-style: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.footer__address {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 8px;
+
+    @include desktop() {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 6px;   
+    }
+}
+
+.footer__email {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin-bottom: 16px;
+    text-decoration: none;
+
+    @include desktop() {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.footer__policy {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 17px;
+    margin-bottom: 8px;
+    text-decoration:underline;
+
+    @include desktop() {
+        grid-column: 1/2;   
+        order: 2;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.footer__info {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+
+    @include desktop() {
+        grid-column: 1/2;   
+        order: 1;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

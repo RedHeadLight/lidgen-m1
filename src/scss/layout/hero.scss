@@ -1,0 +1,95 @@
+.hero {
+    background-color: $brand-bg;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+
+    @include desktop() {
+        text-align: left;
+        padding-top: 123px;
+        padding-bottom: 97px;
+    }
+}
+
+.hero__container {
+    @include desktop() {
+        display: flex;
+        gap: 20px;
+        flex-direction: row-reverse;
+    }
+}
+
+.hero__banner-wrapper {
+    width: 200px;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+
+    @include desktop() {
+        width: 480px;
+        margin: 0;
+        padding-top: 22px;
+    }
+}
+
+.hero__title {
+    @include mobile-h1;
+    color: $white;
+    margin-top: 32px;
+
+    @include desktop() {
+        @include desktop-h1;
+        margin-top: 0;
+    }
+}
+
+.hero__texts {
+    margin-top: 32px;
+
+    li, p {
+        @include mobile-text;
+        color: $white;
+
+        @include desktop() {
+            @include desktop-h3;
+        }
+    }
+
+    li+li, p+p {
+        margin-top: 16px;
+    }
+}
+
+.hero__btns {
+    margin-top: 58px;
+
+    @include desktop() {
+        margin-top: 64px;
+        text-align: center;
+        max-width: 227px;
+    }
+}
+
+.hero__btn {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $text-dark;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: $white;
+    border: 1px solid $brand-button;
+
+    @include desktop() {
+        font-size: 18px;
+    }
+
+    & + & {
+        margin-top: 16px;
+    }
+
+    &--primary {
+        color: $white;
+        background-color: $brand-button;
+    }
+}

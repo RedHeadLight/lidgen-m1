@@ -1,0 +1,45 @@
+.reviews {
+    background-color: $brand-bg;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @include desktop() {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+}
+
+.reviews__list {
+    margin: 0 auto;
+    width: calc(100% - 88px);
+    @include desktop {
+        width: 780px;
+    }
+}
+
+.reviews__item {
+    text-align: center;
+    margin: 0 auto;
+    color: $text-for-dark-bg;
+
+    @include desktop() {
+        text-align: left;
+        width: 382px;
+        margin: 0 0 0 16px;   
+    }
+}
+
+.reviews__item-text {
+    @include desktop-text;
+    margin-bottom: 8px;
+}
+
+.reviews__info {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.reviews__date {
+    margin-top: 4px;
+}

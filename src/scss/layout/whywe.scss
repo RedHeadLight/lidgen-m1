@@ -1,0 +1,60 @@
+.whywe {
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    @include desktop() {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+}
+
+.whywe__list {
+    @include desktop() {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+.whywe__item {
+    padding: 16px;
+    border: 2px solid $blue;
+    border-radius: 8px;
+
+    @include desktop() {
+        padding: 32px;
+    }
+
+    & + & {
+        margin-top: 16px;
+
+        @include desktop() {
+            margin-top: 0;
+        }
+    }
+}
+
+.whywe__item-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+}
+
+.whywe__item-title {
+    @include mobile-h3;
+    color: $text-dark;
+    margin-bottom: 8px;
+
+    @include desktop() {
+        @include desktop-h3;
+    }
+}
+
+.whywe__item-text {
+    @include mobile-text;
+    color: $text-light;
+    
+    @include desktop() {
+        @include desktop-text;
+    }
+}

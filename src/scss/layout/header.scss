@@ -1,0 +1,134 @@
+.header {
+    background-color: $brand-bg;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    position: relative;
+}
+
+.header__logo {
+    @include desktop() {
+        width: 160px;
+        height: 52px;
+    }
+}
+
+.header__menu-wrapper {
+    @include mobile() {
+        position: absolute;
+        background-color: $white;
+        right: 0;
+        top: 0;
+        width: 315px;
+        height: 190px;
+        padding: 16px 16px 32px;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: 0.6s;
+    }
+
+    @include desktop() {
+        position: static;
+        color: $white;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        background-color: $brand-bg;
+    }
+}
+
+.header__menu-wrapper--opened {
+    transform: translateX(0);
+}
+
+.header__menu {
+    @include mobile() {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    @include desktop() {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+}
+
+.header__menu-item {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+
+    @include mobile() {
+        color: $text-dark;
+        text-align: right;
+    }
+}
+
+.header__menu-item svg {
+    margin-left: 8px;
+}
+
+.header__submenu {
+    display: none;
+}
+
+.header__wrapper {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+
+    @include desktop() {
+        display: block;
+    }
+}
+
+.header__tel {
+    list-style-type: none;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+
+    @include desktop() {
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+
+.header__tel-text {
+    display: none;
+
+    @include desktop() {
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        text-align: right;
+    }
+}
+
+.header__button svg {
+    @include desktop() {
+        display: none;
+    }
+}
+
+.header__button-close {
+    display: none;
+
+    @include mobile() {
+        display: block;
+        width: 14px;
+        height: 14px;
+        background-color: $white;
+        z-index: 1;
+        margin-bottom: 16px;
+        margin-left: auto;
+    }
+}

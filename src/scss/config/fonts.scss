@@ -1,0 +1,70 @@
+@mixin includeFont($fontName, $fileName, $weight, $style) {
+  @font-face{
+    font-family: $fontName;
+    font-display: swap;
+    src: url('../fonts/#{$fileName}.woff2') format("woff2"), url("../fonts/#{$fileName}.woff") format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@include includeFont('Gilroy', 'Gilroy-Regular', '400', 'normal');
+@include includeFont('Gilroy', 'Gilroy-Medium', '500', 'normal');
+@include includeFont('Gilroy', 'Gilroy-Semibold', '600', 'normal');
+@include includeFont('Gilroy', 'Gilroy-Bold', '700', 'normal');
+
+@mixin mobile-h1() {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+@mixin mobile-h2() {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+@mixin mobile-h3() {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+}
+
+@mixin mobile-text() {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+@mixin desktop-h1() {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.1;
+}
+
+@mixin desktop-h2() {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+@mixin desktop-h3() {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+@mixin desktop-text() {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+}

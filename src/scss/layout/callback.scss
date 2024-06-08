@@ -1,0 +1,170 @@
+.callback {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: $brand-bg;
+
+    @include desktop() {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+}
+
+.callback__container {
+    @include desktop() {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 16px;
+    }    
+}
+
+.callback__form {
+    margin-bottom: 32px;
+
+    @include desktop() {
+        width: 552px;
+        margin-bottom: 0;
+    }
+}
+
+.callback__title {
+    margin-bottom: 16px;
+    text-align: center;
+
+    @include desktop() {
+        text-align: left;
+    }
+}
+
+.callback__text {
+    @include mobile-text;
+    color: $text-for-dark-bg;
+    max-width: 255px;
+    margin: 0 auto 32px;
+    text-align: center;
+
+    @include desktop() {
+        @include desktop-text;
+        text-align: left;
+        margin: 0 0 32px;
+        max-width: 100%;
+    }
+
+    p+p {
+        margin-top: 16px;
+
+        @include desktop() {
+            margin-top: 8px;
+        }
+    }
+
+    a {
+        color: $white;
+        display: table;
+        margin: 8px auto 0;
+
+        @include desktop() {
+            margin: 8px 0 0;
+        }
+    }
+}
+
+.callback__input-block {
+    @include desktop() {
+        width: 402px;
+    }
+
+    &+& {
+        margin-top: 8px;
+    }
+}
+
+.callback__input {
+    @include mobile-text;
+    color: $text-for-dark-bg;
+    padding: 16px;
+    border: 1px solid $white;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    background: none;
+
+    @include desktop() {
+        @include desktop-text;
+    }
+
+    &::placeholder {
+        opacity: 1;
+        color: $text-for-dark-bg;
+    }
+}
+
+.callback__checkbox-block {
+    margin-top: 8px;
+    position: relative;
+}
+
+.callback__checkbox-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $text-for-dark-bg;
+    position: relative;
+    padding-left: 25px;
+
+    @include desktop() {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 2px;
+        border: 1px solid $white;
+    }
+}
+
+.callback__checkbox:checked + .callback__checkbox-label::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3L5 7L11 1' stroke='%23FCFCFF' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.callback__button {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    text-align: center;
+    color: $white;
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: $brand-button;
+    border: none;
+    margin: 8px auto 0;
+    max-width: 343px;
+
+    @include desktop() {
+        margin: 32px 0 0;
+        max-width: 178px;
+    }
+}
+
+.callback__img-wrapper {
+    width: 100%;
+    aspect-ratio: 343/200;
+
+    @include desktop() {
+        width: 584px;
+        aspect-ratio: 584/384;
+    }
+}
+
+.callback__map {
+    border-radius: 8px;
+}
