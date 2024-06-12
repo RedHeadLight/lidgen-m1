@@ -1,84 +1,47 @@
-.callback {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    background-color: $brand-bg;
-
-    @include desktop() {
-        padding-top: 64px;
-        padding-bottom: 64px;
-    }
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.callback__container {
-    @include desktop() {
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 16px;
-    }    
+.modal__wrapper {
+    width: 343px;
+    padding: 48px 16px 32px;
+    position: relative;
+    background-color: $dark-bg;
+    border-radius: 10px;
 }
 
-.callback__form {
-    margin-bottom: 32px;
-
-    @include desktop() {
-        width: 552px;
-        margin-bottom: 0;
-    }
-}
-
-.callback__title {
+.modal__texts {
     margin-bottom: 16px;
     text-align: center;
-
-    @include desktop() {
-        text-align: left;
-    }
+    color: $white;
 }
 
-.callback__text {
+.modal__title {
+    @include mobile-h2;
+    margin-bottom: 8px;
+}
+
+.modal__subtitle {
     @include mobile-text;
-    color: $text-for-dark-bg;
-    max-width: 255px;
-    margin: 0 auto 32px;
-    text-align: center;
-
-    @include desktop() {
-        @include desktop-text;
-        text-align: left;
-        margin: 0 0 32px;
-        max-width: 100%;
-    }
-
-    p+p {
-        margin-top: 16px;
-
-        @include desktop() {
-            margin-top: 8px;
-        }
-    }
-
-    a {
-        color: $white;
-        display: table;
-        margin: 8px auto 0;
-
-        @include desktop() {
-            margin: 8px 0 0;
-        }
-    }
 }
 
-.callback__input-block {
-    @include desktop() {
-        width: 402px;
-    }
+.modal__close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.modal__input-block {
+    width: 100%;
 
     &+& {
         margin-top: 8px;
     }
 }
 
-.callback__input {
+.modal__input {
     @include mobile-text;
     color: $text-for-dark-bg;
     padding: 16px;
@@ -96,14 +59,18 @@
         opacity: 1;
         color: $text-for-dark-bg;
     }
+
+    &--text {
+        height: 100px;
+    }
 }
 
-.callback__checkbox-block {
+.modal__checkbox-block {
     margin-top: 8px;
     position: relative;
 }
 
-.callback__checkbox-label {
+.modal__checkbox-label {
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
@@ -128,13 +95,13 @@
     }
 }
 
-.callback__checkbox:checked + .callback__checkbox-label::after {
+.modal__checkbox:checked + .modal__checkbox-label::after {
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3L5 7L11 1' stroke='%23FCFCFF' stroke-linecap='round'/%3E%3C/svg%3E%0A");
     background-position: center center;
     background-repeat: no-repeat;
 }
 
-.callback__button {
+.modal__button {
     font-size: 16px;
     font-weight: 500;
     line-height: 19px;
@@ -156,16 +123,5 @@
     @include desktop() {
         margin: 32px 0 0;
         max-width: 178px;
-    }
-}
-
-.callback__map {
-    border-radius: 8px;
-    width: 100%;
-    aspect-ratio: 343/200;
-    overflow: hidden;
-
-    @include desktop() {
-        aspect-ratio: 584/384;
     }
 }

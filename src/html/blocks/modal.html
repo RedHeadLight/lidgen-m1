@@ -1,0 +1,34 @@
+<section class="modal _overlay-bg" data-popup="modal">
+    <div class="modal__wrapper">
+        <button class="modal__close-button button-close" type="button">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L17 17M1 17L17 1" stroke="#FEFEFB" stroke-width="2" />
+            </svg>
+        </button>
+        <div class="modal__texts">
+            <h2 class="modal__title">Хотите узнать стоимость ремонта?</h2>
+            <p class="modal__subtitle">Оставьте свои контакты, и наши специалисты свяжутся с вами</p>
+        </div>
+        <form action="#" class="modal__form">
+            <div class="modal__input-block">
+                <input type="text" class="modal__input" placeholder="Ваше имя" aria-label="Введите имя" required
+                    name="modal-name">
+            </div>
+            <div class="modal__input-block">
+                <input type="text" class="modal__input" placeholder="+7" aria-label="Введите телефон" required
+                    name="modal-phone">
+            </div>
+            <div class="modal__input-block">
+                <textarea class="modal__input modal__input--text" placeholder="Какая у вас поломка?" aria-label="Введите сообщение" required
+                    name="modal-text"></textarea>
+            </div>
+            <div class="modal__checkbox-block">
+                <input type="checkbox" class="modal__checkbox visually-hidden" name="modal-agreement"
+                    id="modal-agreement" required>
+                <label for="modal-agreement" class="modal__checkbox-label">Я соглашаюсь на обработку персональных
+                    данных</label>
+            </div>
+            <button class="modal__button" type="submit">Отправить</button>
+        </form>
+    </div>
+</section>

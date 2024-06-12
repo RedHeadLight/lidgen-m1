@@ -64,6 +64,7 @@ html {
   z-index: 2000; // Увеличить если нужно
   padding: rem(60) rem(15); // Изменить по макету
   overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.7);
 
   @include media(768) {
     &::-webkit-scrollbar {

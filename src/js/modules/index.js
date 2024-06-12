@@ -105,7 +105,9 @@ const togglePopupWindows = () => {
 
       popup.classList.remove('_is-open')
       document.querySelectorAll('.header-navBx__link.dropdown').forEach(el => el.classList.remove('active'))
-      document.querySelector('.header-burger').classList.remove('active')
+      if(document.querySelector('.header-burger')) {
+        document.querySelector('.header-burger').classList.remove('active')
+      }
       toggleBodyLock(false)
     }
   })

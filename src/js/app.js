@@ -180,6 +180,17 @@ document.addEventListener('DOMContentLoaded', function () { // Аналог $(do
             subMenuList.classList.toggle('header__submenu--visible')
         })
     })
+
+    let popupBtns = document.querySelectorAll('[data-type]')
+    let modal = document.querySelector('.modal')
+
+    popupBtns.forEach((item) => {
+        item.addEventListener('click', () => {
+            modal.querySelector('.modal__title').innerText = item.dataset.heading
+            modal.querySelector('.modal__subtitle').innerText = item.dataset.text
+            modal.querySelector('textarea').setAttribute('placeholder', item.dataset.placeholder)
+        })
+    })
 });
 
 //обрезка текста с добавлением в конец синего слова еще, по нажатию на который происходит раскрытие текста
