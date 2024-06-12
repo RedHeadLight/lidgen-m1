@@ -152,6 +152,34 @@ document.addEventListener('DOMContentLoaded', function () { // Аналог $(do
             ]
         })
     }
+
+    // меню.
+    let headerBtn = document.querySelector('.header__button')
+    let headerMenu = document.querySelector('.header__menu-wrapper')
+    if (headerBtn) {
+        headerBtn.addEventListener('click', () => {
+            headerMenu.classList.add('header__menu-wrapper--opened')
+
+        })
+    }
+
+    let headerCloseBtns = document.querySelectorAll('.header__button-close, .header__menu-link:not(.header__menu-link--with-submenu)')
+    headerCloseBtns.forEach((item) => {
+        item.addEventListener('click', () => {
+            headerMenu.classList.remove('header__menu-wrapper--opened')
+        })
+    }) 
+
+    let subMenus = document.querySelectorAll('.header__menu-link--with-submenu')
+
+    subMenus.forEach((item) => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('header__menu-link--active')
+
+            let subMenuList = item.closest('li').querySelector('.header__submenu')
+            subMenuList.classList.toggle('header__submenu--visible')
+        })
+    })
 });
 
 //обрезка текста с добавлением в конец синего слова еще, по нажатию на который происходит раскрытие текста

@@ -1,4 +1,17 @@
-// Заголовки, общие БЄМ блоки и проче...
+:root {
+    --brand-button: #014A97;
+    --brand-bg: #000B4C;
+}
+
+body {
+    overflow-x: hidden;
+    padding-top: 52px;
+
+    @include desktop() {
+        padding-top: 68px;
+    }
+}
+
 .title {
     @include mobile-h2;
     color: $text-dark;

@@ -92,4 +92,8 @@
         color: $white;
         background-color: $brand-button;
     }
+
+    &--primary:hover {
+        background-color: $button-default-hover;
+    }
 }

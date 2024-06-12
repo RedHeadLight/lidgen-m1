@@ -21,6 +21,10 @@
     border: 2px solid $blue;
     border-radius: 8px;
 
+    &:hover {
+        background-color: $blue;
+    }
+
     @include desktop() {
         padding: 32px;
     }

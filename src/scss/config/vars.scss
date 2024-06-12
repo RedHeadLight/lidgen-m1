@@ -61,5 +61,5 @@ $button-default: #0E239F;
 $button-default-hover: #001070;
 $button-additional: #FCFCFF;
 $button-additional-hover: #EBEBF7;
-$brand-button: #014A97;
-$brand-bg: #000B4C;
+$brand-button: var(--brand-button, #014A97);
+$brand-bg: var(--brand-bg, #000B4C);
