@@ -715,6 +715,7 @@ body {
     width: 480px;
     margin: 0;
     padding-top: 22px;
+    flex-shrink: 0;
   }
 }
 
@@ -1086,7 +1087,7 @@ body {
 }
 
 .steps__item {
-  padding: 16px;
+  padding: 14px;
   border: 2px solid #F3F5FF;
   border-radius: 8px;
   counter-increment: steps;
@@ -1125,6 +1126,7 @@ body {
     font-weight: 400;
     font-size: 22px;
     line-height: 1.2;
+    margin-bottom: 8px;
   }
 }
 
