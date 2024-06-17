@@ -289,7 +289,7 @@ a {
 }
 
 :root {
-  --brand-button: #014A97;
+  --color-main-brand: #014A97;
   --brand-bg: #000B4C;
 }
 
@@ -323,6 +323,10 @@ body {
 }
 .title--colored {
   color: #FCFCFF;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .visually-hidden {
@@ -382,6 +386,11 @@ body {
   padding: 8px 16px;
   position: relative;
 }
+@media (min-width: 1216px) {
+  .header__container {
+    padding: 16px;
+  }
+}
 
 @media (min-width: 1216px) {
   .header__logo {
@@ -397,7 +406,7 @@ body {
     right: 0;
     top: 0;
     width: 315px;
-    height: 190px;
+    max-height: 100vh;
     overflow-y: auto;
     padding: 16px 16px 32px;
     z-index: 1;
@@ -649,6 +658,8 @@ body {
   .footer__email {
     font-size: 16px;
     line-height: 19px;
+    margin-bottom: 0;
+    margin-top: 6px;
   }
 }
 
@@ -666,6 +677,8 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+    margin-bottom: 0;
+    margin-top: 16px;
   }
 }
 
@@ -680,6 +693,18 @@ body {
     order: 1;
     font-size: 16px;
     line-height: 19px;
+  }
+}
+@media (min-width: 1216px) {
+  .footer__info span {
+    display: block;
+  }
+}
+
+@media (max-width: 1215px) {
+  .footer__info span:not(:last-child)::after {
+    content: "/";
+    padding-left: 0.5ch;
   }
 }
 
@@ -780,19 +805,23 @@ body {
   padding: 16px;
   border-radius: 8px;
   background-color: #FCFCFF;
-  border: 1px solid var(--brand-button, #014A97);
+  border: 1px solid var(--color-main-brand, #014A97);
+  transition: 0.6s;
 }
 @media (min-width: 1216px) {
   .hero__btn {
     font-size: 18px;
   }
 }
+.hero__btn:hover {
+  background-color: #EBEBF7;
+}
 .hero__btn + .hero__btn {
   margin-top: 16px;
 }
 .hero__btn--primary {
   color: #FCFCFF;
-  background-color: var(--brand-button, #014A97);
+  background-color: var(--color-main-brand, #014A97);
 }
 .hero__btn--primary:hover {
   background-color: #001070;
@@ -874,7 +903,7 @@ body {
   color: #111111;
   margin-top: 9px;
   border-radius: 8px;
-  border: 1px solid var(--brand-button, #014A97);
+  border: 1px solid var(--color-main-brand, #014A97);
   width: 100%;
   text-align: center;
 }
@@ -1034,10 +1063,11 @@ body {
   width: 100%;
   padding: 16px;
   border-radius: 8px;
-  background-color: var(--brand-button, #014A97);
+  background-color: var(--color-main-brand, #014A97);
   border: none;
   margin: 8px auto 0;
   max-width: 343px;
+  transition: 0.6s;
 }
 .form__button:hover {
   background-color: #001070;
@@ -1091,6 +1121,7 @@ body {
   border: 2px solid #F3F5FF;
   border-radius: 8px;
   counter-increment: steps;
+  transition: 0.6s;
 }
 .steps__item:hover {
   background-color: #F3F5FF;
@@ -1175,13 +1206,14 @@ body {
   line-height: 19px;
   color: #FCFCFF;
   border-radius: 8px;
-  background-color: var(--brand-button, #014A97);
+  background-color: var(--color-main-brand, #014A97);
   border: none;
   padding: 16px;
   display: block;
   width: 100%;
   margin-top: 16px;
   text-align: center;
+  transition: 0.6s;
 }
 .steps__btn:hover {
   background-color: #001070;
@@ -1215,6 +1247,7 @@ body {
   padding: 16px;
   border: 2px solid #F3F5FF;
   border-radius: 8px;
+  transition: 0.6s;
 }
 .whywe__item:hover {
   background-color: #F3F5FF;
@@ -1350,7 +1383,8 @@ body {
 }
 @media (min-width: 1216px) {
   .callback__form {
-    width: 552px;
+    width: 584px;
+    flex-shrink: 0;
     margin-bottom: 0;
   }
 }
@@ -1486,10 +1520,11 @@ body {
   width: 100%;
   padding: 16px;
   border-radius: 8px;
-  background-color: var(--brand-button, #014A97);
+  background-color: var(--color-main-brand, #014A97);
   border: none;
   margin: 8px auto 0;
   max-width: 343px;
+  transition: 0.6s;
 }
 .callback__button:hover {
   background-color: #001070;
@@ -1566,9 +1601,10 @@ body {
   color: #111111;
   margin-top: 9px;
   border-radius: 8px;
-  border: 1px solid var(--brand-button, #014A97);
+  border: 1px solid var(--color-main-brand, #014A97);
   width: 100%;
   text-align: center;
+  transition: 0.6s;
 }
 .prices__button:hover {
   background-color: #EBEBF7;
@@ -1592,6 +1628,13 @@ body {
   position: relative;
   background-color: #000731;
   border-radius: 10px;
+}
+@media (min-width: 1216px) {
+  .modal__wrapper {
+    width: 555px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .modal__texts {
@@ -1703,7 +1746,7 @@ body {
   width: 100%;
   padding: 16px;
   border-radius: 8px;
-  background-color: var(--brand-button, #014A97);
+  background-color: var(--color-main-brand, #014A97);
   border: none;
   margin: 8px auto 0;
   max-width: 343px;

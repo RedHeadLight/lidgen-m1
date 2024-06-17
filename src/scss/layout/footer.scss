@@ -79,6 +79,8 @@
     @include desktop() {
         font-size: 16px;
         line-height: 19px;
+        margin-bottom: 0;
+        margin-top: 6px;
     }
 }
 
@@ -95,6 +97,8 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
+        margin-bottom: 0;
+        margin-top: 16px;
     }
 }
 
@@ -108,5 +112,20 @@
         order: 1;
         font-size: 16px;
         line-height: 19px;
+    }
+
+    span {
+        @include desktop() {
+            display: block;
+        }
+    }
+}
+
+.footer__info span {
+    @include mobile() {
+        &:not(:last-child)::after{
+            content: '/';
+            padding-left: 0.5ch;
+        }
     }
 }

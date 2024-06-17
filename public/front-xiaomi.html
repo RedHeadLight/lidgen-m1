@@ -31,7 +31,7 @@
 </head>
 
 <!-- в зависимости от бренда менять переменные на body. -->
-<body style="--brand-button: #F2621B; --brand-bg: #000314;">
+<body style="--color-main-brand: #F2621B; --brand-bg: #000314;">
     <header class="header">
   <div class="container header__container">
     <img src="./images/logo-xiaomi.svg" alt="" class="header__logo">
@@ -200,10 +200,10 @@
     </div>
 </section>
         <section class="catalog" id="catalog">
-    <div class="container catalog__container">
+    <div class="container catalog__container" data-show-more-root>
         <h2 class="title catalog__title">Ремонт любой техники</h2>
         <ul class="catalog__list">
-            <li class="catalog__item">
+            <li class="catalog__item" data-show-more-item>
                 <a href="#" class="catalog__item-link">
                     <div class="-ibg catalog__item-img-wrapper">
                         <img src="https://placehold.co/252x160/EEE/31343C" alt="">
@@ -211,7 +211,7 @@
                     <p class="catalog__item-name">Телевизоры</p>
                 </a>
             </li>
-            <li class="catalog__item">
+            <li class="catalog__item" data-show-more-item>
                 <a href="#" class="catalog__item-link">
                     <div class="-ibg catalog__item-img-wrapper">
                         <img src="https://placehold.co/252x160/EEE/31343C" alt="">
@@ -219,7 +219,7 @@
                     <p class="catalog__item-name">Смартфоны</p>
                 </a>
             </li>
-            <li class="catalog__item">
+            <li class="catalog__item" data-show-more-item>
                 <a href="#" class="catalog__item-link">
                     <div class="-ibg catalog__item-img-wrapper">
                         <img src="https://placehold.co/252x160/EEE/31343C" alt="">
@@ -227,7 +227,7 @@
                     <p class="catalog__item-name">Планшеты</p>
                 </a>
             </li>
-            <li class="catalog__item">
+            <li class="catalog__item" data-show-more-item>
                 <a href="#" class="catalog__item-link">
                     <div class="-ibg catalog__item-img-wrapper">
                         <img src="https://placehold.co/252x160/EEE/31343C" alt="">
@@ -235,7 +235,7 @@
                     <p class="catalog__item-name">Пылесосы</p>
                 </a>
             </li>
-            <li class="catalog__item">
+            <li class="catalog__item" data-show-more-item>
                 <a href="#" class="catalog__item-link">
                     <div class="-ibg catalog__item-img-wrapper">
                         <img src="https://placehold.co/252x160/EEE/31343C" alt="">
@@ -243,7 +243,7 @@
                     <p class="catalog__item-name">Стиральные машины</p>
                 </a>
             </li>
-            <li class="catalog__item">
+            <li class="catalog__item" data-show-more-item>
                 <a href="#" class="catalog__item-link">
                     <div class="-ibg catalog__item-img-wrapper">
                         <img src="https://placehold.co/252x160/EEE/31343C" alt="">
@@ -251,7 +251,7 @@
                     <p class="catalog__item-name">Микроволновые печи</p>
                 </a>
             </li>
-            <li class="catalog__item">
+            <li class="catalog__item" data-show-more-item>
                 <a href="#" class="catalog__item-link">
                     <div class="-ibg catalog__item-img-wrapper">
                         <img src="https://placehold.co/252x160/EEE/31343C" alt="">
@@ -259,7 +259,23 @@
                     <p class="catalog__item-name">Смарт-часы</p>
                 </a>
             </li>
-            <li class="catalog__item">
+            <li class="catalog__item" data-show-more-item>
+                <a href="#" class="catalog__item-link">
+                    <div class="-ibg catalog__item-img-wrapper">
+                        <img src="https://placehold.co/252x160/EEE/31343C" alt="">
+                    </div>
+                    <p class="catalog__item-name">Холодильники</p>
+                </a>
+            </li>
+            <li class="catalog__item hidden" data-show-more-item>
+                <a href="#" class="catalog__item-link">
+                    <div class="-ibg catalog__item-img-wrapper">
+                        <img src="https://placehold.co/252x160/EEE/31343C" alt="">
+                    </div>
+                    <p class="catalog__item-name">Холодильники</p>
+                </a>
+            </li>
+            <li class="catalog__item hidden" data-show-more-item>
                 <a href="#" class="catalog__item-link">
                     <div class="-ibg catalog__item-img-wrapper">
                         <img src="https://placehold.co/252x160/EEE/31343C" alt="">
@@ -268,7 +284,7 @@
                 </a>
             </li>
         </ul>
-        <button class="catalog__button" type="button">Посмотреть еще</button>
+        <button class="catalog__button" data-show-more type="button">Посмотреть еще</button>
     </div>
 </section>
         <section class="form">

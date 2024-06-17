@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function () { // Аналог $(do
             nextArrow: '<button type="button" class="slider-arrow slider-arrow--next"></button>',
             responsive: [
                 {
-                    breakpoint: 1216, 
+                    breakpoint: 1216,
                     settings: {
                         slidesToShow: 2,
                     }
@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', function () { // Аналог $(do
         item.addEventListener('click', () => {
             headerMenu.classList.remove('header__menu-wrapper--opened')
         })
-    }) 
+    })
 
     let subMenus = document.querySelectorAll('.header__menu-link--with-submenu')
 
@@ -413,6 +413,26 @@ document.addEventListener('DOMContentLoaded', function () { // Аналог $(do
             modal.querySelector('textarea').setAttribute('placeholder', item.dataset.placeholder)
         })
     })
+
+    //скрипт показывает по кнопке "показать еще" позиции из списка
+
+    let showMoreBtns = document.querySelectorAll('[data-show-more]')
+    const SHOW_MORE_COUNTER = 6
+
+    showMoreBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            let showMoreItems = btn.closest('[data-show-more-root]').querySelectorAll('.hidden[data-show-more-item]')
+            if (showMoreItems.length <= SHOW_MORE_COUNTER) {
+                btn.classList.add("hidden")
+            }
+
+            let current = [...showMoreItems].slice(0, SHOW_MORE_COUNTER)
+            current.forEach((element) => {
+                element.classList.remove("hidden")
+            });
+        })
+    }) 
+        
 });
 
 //обрезка текста с добавлением в конец синего слова еще, по нажатию на который происходит раскрытие текста

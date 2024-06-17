@@ -10,6 +10,12 @@
     position: relative;
     background-color: $dark-bg;
     border-radius: 10px;
+
+    @include desktop() {
+        width: 555px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }
 
 .modal__texts {

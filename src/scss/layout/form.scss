@@ -135,6 +135,7 @@
     border: none;
     margin: 8px auto 0;
     max-width: 343px;
+    transition: 0.6s;
 
     &:hover {
         background-color: $button-default-hover;

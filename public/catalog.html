@@ -31,7 +31,7 @@
 </head>
 
 <!-- в зависимости от бренда менять переменные на body. -->
-<body style="--brand-button: #1F79C6; --brand-bg: #0E314F;">
+<body style="--color-main-brand: #1F79C6; --brand-bg: #0E314F;">
     <header class="header">
   <div class="container header__container">
     <img src="./images/logo-default.svg" alt="" class="header__logo">
@@ -180,7 +180,7 @@
         <section class="hero">
     <div class="container hero__container">
         <div class="-ibg hero__banner-wrapper">
-            <img src="./images/@@image" alt="" class="hero__banner">
+            <img src="./images/hero-samsung.png" alt="" class="hero__banner">
         </div>
 
         <div class="hero__wrapper">
@@ -200,47 +200,47 @@
     </div>
 </section>
         <section class="prices">
-    <div class="container prices__container">
+    <div class="container prices__container" data-show-more-root>
         <h2 class="title prices__title">Ремонтируем любую поломку</h2>
         <ul class="prices__list">
-            <li class="prices__item">
+            <li class="prices__item" data-show-more-item>
                 <p class="prices__item-title">Диагностика</p>
                 <p class="prices__item-price">Бесплатно</p>
             </li>
-            <li class="prices__item">
+            <li class="prices__item" data-show-more-item>
                 <p class="prices__item-title">Замена дисплея</p>
                 <p class="prices__item-price">1 750 ₽ </p>
             </li>
-            <li class="prices__item">
+            <li class="prices__item" data-show-more-item>
                 <p class="prices__item-title">Замена тачскрина</p>
                 <p class="prices__item-price">3 250 ₽</p>
             </li>
-            <li class="prices__item">
+            <li class="prices__item" data-show-more-item>
                 <p class="prices__item-title">Замена динамика</p>
                 <p class="prices__item-price">1 800 ₽</p>
             </li>
-            <li class="prices__item">
+            <li class="prices__item" data-show-more-item>
                 <p class="prices__item-title">Замена материнской платы</p>
                 <p class="prices__item-price">1 300 ₽</p>
             </li>
-            <li class="prices__item">
+            <li class="prices__item" data-show-more-item>
                 <p class="prices__item-title">Замена аккумулятора</p>
                 <p class="prices__item-price">900 ₽</p>
             </li>
-            <li class="prices__item">
+            <li class="prices__item" data-show-more-item>
                 <p class="prices__item-title">Ремонт камеры</p>
                 <p class="prices__item-price">750 ₽</p>
             </li>
-            <li class="prices__item">
+            <li class="prices__item" data-show-more-item>
                 <p class="prices__item-title">Ремонт кнопки включения</p>
                 <p class="prices__item-price">900 ₽</p>
             </li>
-            <li class="prices__item">
+            <li class="prices__item" data-show-more-item>
                 <p class="prices__item-title">Замена USB</p>
                 <p class="prices__item-price">600 ₽</p>
             </li>
         </ul>
-        <button class="prices__button" type="button">Посмотреть еще</button>
+        <button class="prices__button" data-show-more type="button">Посмотреть еще</button>
     </div>
 </section>
         <section class="form">

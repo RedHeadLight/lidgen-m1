@@ -5,7 +5,7 @@
 })
 
 <!-- в зависимости от бренда менять переменные на body. -->
-<body style="--brand-button: #1F79C6; --brand-bg: #0E314F;">
+<body style="--color-main-brand: #1F79C6; --brand-bg: #0E314F;">
     @@include('html/header.html', {
         'logo': 'logo-default.svg'
     })
@@ -13,7 +13,9 @@
 
 
     <main class="main main-index">
-        @@include('html/blocks/hero.html', {})
+        @@include('html/blocks/hero.html', {
+            'image': 'hero-samsung.png'
+        })
         @@include('html/blocks/prices.html', {})
         @@include('html/blocks/form.html', {})
         @@include('html/blocks/steps.html', {})
