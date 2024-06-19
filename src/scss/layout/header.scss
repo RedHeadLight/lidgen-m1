@@ -112,13 +112,22 @@
         border-radius: 8px;
         padding: 20px;
         z-index: 1;
+        display: grid;
+        visibility: hidden;
+        transform: translateY(50px);
+        opacity: 0;
+        transition: 0.6s;
     }
 
     &--visible {
-        display: block;
+        @include mobile() {
+            display: block;
+        }
 
         @include desktop() {
-            display: grid;
+            visibility: visible;
+            transform: translateY(0);
+            opacity: 1;
         }
 
     }

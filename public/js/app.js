@@ -392,16 +392,39 @@ document.addEventListener('DOMContentLoaded', function () { // Аналог $(do
         })
     })
 
-    let subMenus = document.querySelectorAll('.header__menu-link--with-submenu')
+    let subMenuLinks = document.querySelectorAll('.header__menu-link--with-submenu')
 
-    subMenus.forEach((item) => {
-        item.addEventListener('click', () => {
+    subMenuLinks.forEach((item) => {
+        item.addEventListener('click', (evt) => {
+            evt.stopPropagation()
             item.classList.toggle('header__menu-link--active')
 
             let subMenuList = item.closest('li').querySelector('.header__submenu')
             subMenuList.classList.toggle('header__submenu--visible')
         })
     })
+
+    let subMenus = document.querySelectorAll('.header__submenu')
+    subMenus.forEach((item) => {
+        item.addEventListener('click', (evt) => {
+            evt.stopPropagation()
+        })
+    })
+
+    document.body.addEventListener('click', () => {
+        let openedMenu = document.querySelector('.header__submenu--visible')
+
+        if (openedMenu) {
+            openedMenu.classList.remove('header__submenu--visible')
+        }
+
+        let openedMenuLink = document.querySelector('.header__menu-link--active')
+
+        if (openedMenuLink) {
+            openedMenuLink.classList.remove('header__menu-link--active')
+        }
+    })
+
 
     let popupBtns = document.querySelectorAll('[data-type]')
     let modal = document.querySelector('.modal')

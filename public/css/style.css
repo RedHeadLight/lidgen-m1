@@ -252,7 +252,7 @@ textarea {
   font: inherit;
 }
 
-button {
+button, a {
   cursor: pointer;
 }
 
@@ -485,14 +485,23 @@ body {
     border-radius: 8px;
     padding: 20px;
     z-index: 1;
+    display: grid;
+    visibility: hidden;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.6s;
   }
 }
-.header__submenu--visible {
-  display: block;
+@media (max-width: 1215px) {
+  .header__submenu--visible {
+    display: block;
+  }
 }
 @media (min-width: 1216px) {
   .header__submenu--visible {
-    display: grid;
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -858,6 +867,7 @@ body {
 }
 .catalog__item-link:hover {
   background-color: #F3F5FF;
+  transition: 0.6s;
 }
 .catalog__item-link:hover img {
   transform: scale(1.1);
@@ -906,6 +916,7 @@ body {
   border: 1px solid var(--color-main-brand, #014A97);
   width: 100%;
   text-align: center;
+  transition: 0.6s;
 }
 .catalog__button:hover {
   background-color: #EBEBF7;

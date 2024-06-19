@@ -27,6 +27,7 @@
 
     &:hover {
         background-color: $blue;
+        transition: 0.6s;
 
         img {
             transform: scale(1.1);
@@ -70,6 +71,7 @@
     border: 1px solid $brand-button;
     width: 100%;
     text-align: center;
+    transition: 0.6s;
 
     &:hover {
         background-color: $button-additional-hover;
