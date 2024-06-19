@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () { // Аналог $(do
         $('input[name="tel"]').mask('+7 (999) 999-99-99')
     }
     if (document.querySelector('input[name="phone"]')) {
-        $('input[name="tel"]').mask('+7 (999) 999-99-99')
+        $('input[name="phone"]').mask('+7 (999) 999-99-99')
     }
 
     if (document.querySelector('.license')) {
